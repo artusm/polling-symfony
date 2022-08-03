@@ -1,0 +1,7 @@
+.error {
+	margin-top: 150px;
+	
+	font-size: 35px;
+	font-weight: 200;
+	letter-spacing: var(--space-s);
+}

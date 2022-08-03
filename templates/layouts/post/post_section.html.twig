@@ -1,0 +1,67 @@
+<div class="media post">
+    <div class="media-bar">
+        <a class="media-bar-item" href="{{ path("user_posts") }}"> user_name </a>
+        <div class="float-right">
+            <div class="dropdown" tabindex="0">
+                <div class="dropdown-btn">•••</div>
+                <ul class="dropdown-cont position-right">
+                    <li class="dropdown-item"> Delete </li>
+                    <li class="dropdown-item"> Edit </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="media-cont">
+        <div class="main-title media-text post-title"> This is a title </div>
+
+        <div class="media-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo consequat.
+        </div>
+
+        <div class="poll-cont main-section">
+            <div class="poll-bar-cont">
+                <div class="float-right poll-bar-amt"> 33% </div>
+                <div class="poll-bar check{state:0}">
+                    <div class="poll-bar-text"> Option 1 </div>
+                    <div class="poll-voted"></div>
+                </div>
+            </div>
+
+            <div class="poll-bar-cont">
+                <div class="float-right poll-bar-amt"> 33% </div>
+                <div class="poll-bar check{state:0}">
+                    <div class="poll-bar-text"> Option 2 </div>
+                    <div class="poll-voted"></div>
+                </div>
+            </div>
+
+            <div class="poll-bar-cont">
+                <div class="float-right poll-bar-amt"> 33% </div>
+                <div class="poll-bar check{state:0}">
+                    <div class="poll-bar-text"> Option 3 </div>
+                    <div class="poll-voted"></div>
+                </div>
+            </div>
+
+            <div class="media-info-text-cont"> 545 Votes </div>
+        </div>
+    </div>
+
+    <div class="media-date float-right"> 2015, 25 October </div>
+
+    <div class="media-bar">
+        <div class="media-bar-item media-bar-like">
+            <img class="invert-icon media-bar-icon check{state:0}" src="/assets/img/icons/like-icon.png">
+            <div class="media-bar-icon-value"> 99 </div>
+        </div>
+
+        <a class="media-bar-item" href="{{ path("post") }}">
+            <img class="invert-icon media-bar-icon" src="/assets/img/icons/comment-icon.png">
+            <div class="media-bar-icon-value"> 99 </div>
+        </a>
+    </div>
+</div>

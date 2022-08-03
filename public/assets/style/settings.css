@@ -1,0 +1,25 @@
+.settings-cont { padding: var(--space-l); }
+
+.settings-title {
+    font-size: var(--font-l);
+    text-align: center;
+}
+
+.settings-text { margin-bottom: var(--space-l); }
+
+.settings-menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+}
+
+.settings-error {
+    padding: var(--space-m) 30px;
+
+    text-align: center;
+}
+
+.settings-menu-item { padding: var(--space-l); }
+
+.settings-menu-bar-value { margin: calc(-1 * var(--space-m)); }
+
+.settings-section:not(:last-child) { margin-bottom: 40px; }

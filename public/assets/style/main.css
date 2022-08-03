@@ -1,0 +1,123 @@
+body {
+    margin: 0;
+
+    background-color: var(--back-color-d);
+    color: var(--font-color);
+
+    font-family: sans-serif;
+    font-size: var(--font-s);
+}
+
+a {
+    text-decoration: none;
+    color: var(--font-color);
+}
+
+.theme-box {
+    background-color: var(--back-color);
+
+    border: 1px var(--back-color-l) solid;
+    border-radius: var(--radius-s);
+}
+
+.block-right {
+    display: block;
+
+    margin-left: auto;
+}
+
+.block-middle {
+    display: block;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.position-right { right: 0; }
+
+.float-right { float: right; }
+
+.invert-icon { filter: var(--icon-invert); }
+
+.main-title { font-weight: bold; }
+
+.main-section {
+    background-color: var(--back-color-l);
+    border-radius: var(--radius-s);
+}
+
+.main-input {
+    background-color: var(--back-color-d);
+    color: var(--font-color);
+    border-radius: var(--radius-m);
+
+    padding: 4px 8px;
+
+    border: none;
+    border: 1px var(--back-color-l) solid;
+    box-sizing: border-box;
+
+    font-size: var(--font-s);
+}
+.main-input:focus {
+    border-color: white;
+}
+
+.main-textarea {
+    height: 75px;
+    resize: vertical;
+
+    font-family: sans-serif;
+}
+
+.main-button {
+    padding: var(--space-s) var(--space-m);
+
+    font-size: var(--font-s);
+
+    background-color: var(--theme-color);
+    color: var(--font-color);
+    border: none;
+    border-bottom: 3px var(--theme-color-d) solid;
+    border-radius: var(--radius-s);
+
+    cursor: pointer;
+}
+.main-button:focus {
+    border-top: 1px var(--theme-color) solid;
+    border-bottom: 2px var(--theme-color-d) solid;
+}
+
+.main-error {
+    font-weight: 900;
+    color: var(--theme-color-d);
+}
+
+.main-success { 
+    font-weight: 100; 
+    color: var(--theme-color);
+}
+
+.main-info-text {
+    display: inline-block;
+
+    padding-right: var(--space-s);
+}
+.main-info-text:not(:last-child) {
+    border-right-width: 1px;
+    border-right-style: solid;
+}
+
+.main-menu-bar {
+    margin-bottom: var(--space-m);
+    padding: var(--space-m);
+}
+
+.main-menu-bar-key { display: inline-block; }
+
+.main-menu-bar-value { float: right; }
+
+.main-menu-bar-icon {
+    width: var(--font-m);
+    padding-right: var(--space-s);
+}

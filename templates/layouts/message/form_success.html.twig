@@ -1,0 +1,3 @@
+{% if app.request.get("success") %}
+    <div class="main-success card-message"> {{ app.request.get("success") }} </div>
+{% endif %}

@@ -1,0 +1,33 @@
+.header-main {
+    z-index: 2;
+    position: fixed;
+    top: 0;
+
+    width: 100%;
+
+    border-bottom: 2px var(--theme-color) solid;
+}
+
+.header-input {
+    width: 15%;
+    margin-left: var(--space-l);
+
+    font-size: var(--font-m);
+}
+
+.header-item {
+    display: inline-block;
+
+    padding: var(--space-l);
+
+    font-size: var(--font-m);
+
+    cursor: pointer;
+}
+.header-item:hover { background-color: var(--theme-color); }
+
+.header-logo {
+    width: 40px;
+    margin: calc(-1 * var(--space-l));
+    padding: 0 var(--space-s);
+}

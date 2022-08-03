@@ -1,0 +1,123 @@
+{{ include("layouts/message/form_success.html.twig") }}
+
+<br>
+
+<div class="theme-box settings-cont page-block">
+    <div class="main-title settings-text settings-title"> Appearance </div>
+
+    <div class="settings-section">
+        <div class="main-section main-menu-bar">
+            <div class="main-menu-bar-key"> Light / Dark Theme </div>
+            <div class="select storage{local:main-theme} dropdown main-menu-bar-value settings-menu-bar-value" tabindex="0">
+                <div class="dropdown-btn"> <em class="select-checked"></em> &nbsp▼ </div>
+                <ul class="dropdown-cont position-right">
+                    <li class="select-item dropdown-item select{main-theme:dark} check{state:1}"> Dark </li>
+                    <li class="select-item dropdown-item select{main-theme:light} check{state:0}"> Light </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="main-section main-menu-bar">
+            <div class="main-menu-bar-key"> Color Theme </div>
+            <div class="select storage{local:color-theme} dropdown main-menu-bar-value settings-menu-bar-value" tabindex="0">
+                <div class="dropdown-btn"> <em class="select-checked"></em> &nbsp▼ </div>
+                <ul class="dropdown-cont position-right">
+                    <li class="select-item dropdown-item select{color-theme:red} check{state:0}"> Red </li>
+                    <li class="select-item dropdown-item select{color-theme:green} check{state:0}"> Green </li>
+                    <li class="select-item dropdown-item select{color-theme:blue} check{state:1}"> Blue </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% if app.user %}
+    <form id="user-edit-information-form" class="theme-box settings-cont page-block" action="{{ path("user_edit_info") }}" method="POST">
+        <div class="main-title settings-text settings-title"> User Information </div>
+        
+        <div id="user-edit-information-error"></div>
+
+        <div class="main-section settings-section settings-menu">
+            <div class="settings-menu-item">
+                <div class="main-title"> Username </div>
+                <input class="main-input settings-input" name="username" value="{{ app.user.userInformation.username }}" pattern="^[a-zA-Z0-9_]{1,25}$" required>
+            </div>
+        </div>
+        
+        <input type="hidden" name="csrf-token" value="{{ csrf_token("csrf-token") }}">
+
+        <button class="main-button block-right" type="submit" name="submit"> Save Changes </button>
+    </form>
+
+    <form id="user-edit-email-form" class="theme-box settings-cont page-block" action="{{ path("user_edit_email") }}" method="POST">
+        <div class="main-title settings-text settings-title"> Email </div>
+        
+        <div id="user-edit-email-error"></div>
+
+        <div class="main-section settings-section settings-menu">
+            <div class="settings-menu-item">
+                <div class="main-title"> Email </div>
+                <input class="main-input settings-input" name="email" value="{{ app.user.email }}" type="email" required>
+            </div>
+        </div>
+
+        <input type="hidden" name="csrf-token" value="{{ csrf_token("csrf-token") }}">
+
+        <button class="main-button block-right" type="submit" name="submit"> Save Changes </button>
+    </form>
+
+    <form id="user-edit-password-form" class="theme-box settings-cont page-block" action="{{ path("user_edit_password") }}" method="POST">
+        <div class="main-title settings-text settings-title"> Password </div>
+
+        <div id="user-edit-password-error"></div>
+
+        <div class="main-section settings-section settings-menu">
+            <div class="settings-menu-item">
+                <div class="main-title"> Old Password </div>
+                <input class="main-input settings-input" name="password-old" type="password">
+            </div>
+
+            <div class="settings-menu-item">
+                <div class="main-title"> New Password </div>
+                <input class="main-input settings-input" name="password-new" type="password">
+            </div>
+
+            <div class="settings-menu-item">
+                <div class="main-title"> New Password (Repeat) </div>
+                <input class="main-input settings-input" name="password-new-repeat" type="password">
+            </div>
+        </div>
+
+        <input type="hidden" name="csrf-token" value="{{ csrf_token("csrf-token") }}">
+
+        <button class="main-button block-right" type="submit" name="submit"> Save Changes </button>
+    </form>
+
+    <form id="user-delete-form" class="theme-box settings-cont page-block" action="{{ path("user_delete") }}" method="POST">
+        <div class="main-title settings-text settings-title"> Delete Account </div>
+
+        <div id="user-delete-error"></div>
+
+        <div class="settings-text">
+            This action will delete your account, posts, comments, likes, votes
+            and all other actions made by you, irreversably. Press the button bellow
+            to send a verification to your email for deleting your account.
+        </div>
+
+        <div class="main-section settings-section settings-menu">
+            <div class="settings-menu-item">
+                <div class="main-title"> Password </div>
+                <input class="main-input settings-input" name="password" type="password" required>
+            </div>
+
+            <div class="settings-menu-item">
+                <div class="main-title"> Password (Repeat) </div>
+                <input class="main-input settings-input" name="password-repeat" type="password" required>
+            </div>
+        </div>
+
+        <input type="hidden" name="csrf-token" value="{{ csrf_token("csrf-token") }}">
+
+        <button class="main-button block-right" type="submit" name="submit"> Delete Account </button>
+    </div>
+{% endif %}

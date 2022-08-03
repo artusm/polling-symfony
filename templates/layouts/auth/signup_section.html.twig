@@ -1,0 +1,20 @@
+<form id="user-signup-form" class="theme-box card-box page-wide-cont-s block-middle" action="{{ path("signup_init") }}" method="POST">
+    <div class="main-title card-title"> Create a New Account </div>
+
+    {{ include("layouts/message/form_success.html.twig") }}
+
+    <div id="user-signup-error"></div>
+
+    <div class="card-cont">
+        <input class="main-input card-input block-middle" name="username" placeholder="username" pattern="^[a-zA-Z0-9_]{1,25}$" required>
+        <input class="main-input card-input block-middle" name="email" type="email" placeholder="email" required>
+        <input class="main-input card-input block-middle" name="password" type="password" placeholder="password" required>
+        <input class="main-input card-input block-middle" name="password-repeat" type="password" placeholder="password (repeat)" required>
+    </div>
+
+    <input type="hidden" name="csrf-token" value="{{ csrf_token("csrf-token") }}">
+
+    {{ include("layouts/captcha/captcha_form.html.twig") }}
+
+    <button class="main-button card-button" type="submit" name="submit"> Signup </button>
+</div>

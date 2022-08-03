@@ -1,0 +1,34 @@
+.page-temp-main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-column-gap: var(--space-l);
+
+    width: 60%;
+    margin: 80px auto 0 auto;
+}
+
+.page-main {
+    grid-column: 1/2;
+
+    margin-bottom: var(--space-l);
+}
+
+.page-wide { grid-column: 1/3; }
+
+.page-block { margin-bottom: var(--space-l); }
+
+.page-side { grid-column: 2/3; }
+
+.page-thin-block { display: none; }
+
+.info-side { text-align: center; }
+
+.info-side-text {
+    display: inline-block;
+
+    padding: var(--space-m);
+}
+
+.page-wide-cont-s { width: 300px; }
+
+.page-wide-cont-m { width: 500px; }

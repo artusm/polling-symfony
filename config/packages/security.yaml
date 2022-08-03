@@ -1,0 +1,61 @@
+security:
+    enable_authenticator_manager: true
+
+    password_hashers:
+        Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface: 'auto'
+
+    providers:
+        users_in_memory: { memory: null }
+        user:
+            entity:
+                class: App\Entity\User
+                property: email
+        admin:
+            entity:
+                class: App\Entity\Admin
+                property: username
+    firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+
+        admin:
+            pattern: ^/admin
+            provider: admin
+
+            login_throttling:
+                max_attempts: 3
+                interval: "10 minutes"
+
+            logout:
+                path: logout
+
+            custom_authenticator: App\Security\AdminAuthenticator
+
+        main:
+            provider: user
+
+            login_throttling:
+                max_attempts: 5
+                interval: "5 minutes"
+
+            logout:
+                path: logout
+                target: login
+
+            custom_authenticator: App\Security\UserAuthenticator
+
+            user_checker: App\Security\UserChecker
+
+    access_control:
+        - { path: ^/admin/login, roles: PUBLIC_ACCESS }
+        - { path: ^/admin, roles: ROLE_ADMIN }
+
+when@test:
+    security:
+        password_hashers:
+            Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface:
+                algorithm: auto
+                cost: 4 # Lowest possible value for bcrypt
+                time_cost: 3 # Lowest possible value for argon
+                memory_cost: 10 # Lowest possible value for argon

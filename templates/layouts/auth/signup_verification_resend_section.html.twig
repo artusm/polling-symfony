@@ -1,0 +1,17 @@
+<form id="signup-verification-resend-form" class="theme-box card-box page-wide-cont-s block-middle" action="{{ path("signup_verification_resend_init") }}" method="POST">
+    <div class="main-title card-title"> Resend Email Verification Token? </div>
+
+    {{ include("layouts/message/form_success.html.twig") }}
+
+    <div id="signup-verification-resend-error"></div>
+
+    <div class="card-cont">
+        <input class="main-input card-input block-middle" name="email" type="email" placeholder="email" required>
+    </div>
+
+    <input type="hidden" name="csrf-token" value="{{ csrf_token("csrf-token") }}">
+
+    {{ include("layouts/captcha/captcha_form.html.twig") }}
+
+    <button class="main-button card-button" type="submit" name="submit"> Resend Verification </button>
+</form>

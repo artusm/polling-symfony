@@ -1,0 +1,21 @@
+<form class="theme-box card-box page-wide-cont-s block-middle" action="{{ path("login") }}" method="POST">
+    <div class="main-title card-title"> Login to Your Account </div>
+
+    {{ include("layouts/message/form_error.html.twig") }}
+
+    <div class="card-cont">
+        <input class="main-input card-input block-middle" name="email" value="{{ last_username }}" placeholder="email" type="email" required>
+        <input class="main-input card-input block-middle" name="password" type="password" placeholder="password" required>
+    </div>
+
+    <input type="hidden" name="csrf-token" value="{{ csrf_token("csrf-token") }}">
+
+    {{ include("layouts/captcha/captcha_form.html.twig") }}
+
+    <div class="card-info-text-cont">
+        <a class="main-info-text" href="{{ path("signup") }}"> Create account </a>
+        <a class="main-info-text" href="{{ path("password_reset") }}"> Forgot password? </a>
+    </div>
+
+    <button class="main-button card-button" type="submit" name="submit"> Login </button>
+</form>

@@ -1,0 +1,48 @@
+<div class="media comment">
+    <div class="media-bar">
+        <a class="media-bar-item" href="{{ path("user_posts") }}"> user_name </a>
+        <div class="float-right">
+            <div class="dropdown" tabindex="0">
+                <div class="dropdown-btn">• • •</div>
+                <ul class="dropdown-cont position-right">
+                    <li class="dropdown-item"> Delete </li>
+                    <li class="dropdown-item"> Edit </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="media-cont">
+        <div class="media-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo consequat.
+        </div>
+    </div>
+
+    <div class="media-date float-right"> 2015, 25 October </div>
+
+    <div class="media-bar">
+        <div class="media-bar-item media-bar-like">
+            <img class="media-bar-icon invert-icon check{state:0}" src="/assets/img/icons/like-icon.png">
+            <div class="media-bar-icon-value"> 99 </div>
+        </div>
+
+        <div class="media-bar-item comment-bar-reply">
+            <img class="media-bar-icon invert-icon" src="/assets/img/icons/reply-icon.png">
+            <div class="media-bar-icon-value"> 99 </div>
+        </div>
+    </div>
+
+    <div class="reply-cont">
+        <form class="main-section reply-section media-cont" method="POST">
+            <textarea class="main-input main-textarea media-textarea block-middle" name="reply" placeholder="reply to the comment..." required></textarea>
+            <button class="main-button media-button block-right" type="submit" name="submit"> Reply </button>
+        </form>
+
+        <div class="main-section reply-section">
+            {{ include("layouts/comment/reply_section.html.twig") }}
+        </div>
+    </div>
+</div>

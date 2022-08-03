@@ -1,0 +1,23 @@
+:root {
+    --back-color-l: hsl(0, 0%, 15%);
+    --back-color: hsl(0, 0%, 10%);
+    --back-color-d: hsl(0, 0%, 5%);
+    --theme-color: hsl(190, 60%, 40%);
+    --theme-color-d: hsl(190, 60%, 25%);
+
+    --font-color-l: hsl(0, 0%, 50%);
+    --font-color: hsl(0, 0%, 90%);
+    --font-s: 15px;
+    --font-m: 17px;
+    --font-l: 19px;
+
+    --radius-s: 5px;
+    --radius-m: 10px;
+    --radius-l: 15px;
+
+    --space-s: 5px;
+    --space-m: 10px;
+    --space-l: 15px;
+
+    --icon-invert: invert(100%);
+}

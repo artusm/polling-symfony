@@ -1,0 +1,42 @@
+.card-box {
+    padding: var(--space-m);
+    margin-top: 30px;
+
+    border-bottom: 2px var(--theme-color) solid;
+}
+
+.card-input {
+    width: 100%;
+    margin-bottom: var(--space-l);
+
+    font-size: var(--font-m);
+}
+
+.card-button {
+    width: 100%;
+    margin-top: var(--space-m);
+
+    font-size: var(--font-l);
+}
+
+.card-title {
+    padding: var(--space-m);
+    padding-bottom: var(--space-l);
+
+    font-size: var(--font-l);
+    text-align: center;
+}
+
+.card-message {
+    padding: var(--space-m) 30px;
+
+    text-align: center;
+}
+
+.card-cont { padding: var(--space-s) 30px; }
+
+.card-info-text-cont {
+    padding: var(--space-s);
+
+    text-align: center;
+}

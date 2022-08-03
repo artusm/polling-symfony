@@ -1,0 +1,51 @@
+@media screen and (max-width: 80rem) {
+    .header-input {
+        width: 25%;
+        margin-left: var(--space-m);
+    }
+
+    .page-temp-main { width: 95%; }
+
+    .error {
+        margin-top: 100px;
+    }
+}
+
+@media screen and (max-width: 50rem) {
+    .error {
+        margin-top: 50px;
+        
+        font-size: var(--font-l);
+    }
+
+    .header-logo {
+        width: 30px;
+        margin: calc(-1 * var(--space-m));
+    }
+
+    .header-item { padding: var(--space-m); }
+
+    .page-temp-main {
+        grid-template-columns: 1fr;
+
+        width: 99%;
+        margin-top: 70px;
+    }
+
+    .page-side {
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+
+    .page-main { margin-bottom: 0; }
+
+    .page-thin-block { display: block; }
+
+    .page-thin-none { display: none; }
+
+    .page-wide-cont-m { width: 400px; }
+
+    .profile-menu-desc { margin: var(--space-m); }
+
+    .settings-input { width: 100%; }
+}

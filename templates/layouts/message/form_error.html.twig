@@ -1,0 +1,5 @@
+{% if error.message is defined %}
+    <div class="main-error card-message"> {{ error.message }} </div>
+{% elseif app.request.get("success") %}
+    <div class="main-success card-message"> {{ app.request.get("success") }} </div>
+{% endif %}
